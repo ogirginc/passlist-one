@@ -1,0 +1,19 @@
+<h1>Upload Users CSV</h1>
+
+<div data-controller="csv-upload">
+  <%= form_tag csv_upload_path, multipart: true, data: {
+    csv_upload_target: "form",
+    action: "submit->csv-upload#submit"
+  } do %>
+    <div class="field">
+      <%= label_tag "file", "Select CSV File" %>
+      <%= file_field_tag "file", accept: "text/csv" %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag "Upload" %>
+    </div>
+  <% end %>
+
+  <div data-csv-upload-target="results"></div>
+</div>
