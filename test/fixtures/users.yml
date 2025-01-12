@@ -2,6 +2,8 @@
 
 one:
   name: One
+  password_digest: Bcrypt::Password.create('P@ssw0rd')
 
 two:
   name: Two
+  password_digest: Bcrypt::Password.create('P@ssw0rd')
